@@ -20,5 +20,14 @@ describe 'CharCounter' do
     dic['d'].should be 1
     dic['o'].should be 1
   end  
+
+  it 'should return {a=>2,t=>1,d=>1,0=>1 } when string is ata do' do
+    dic = CharCounter.count('ata do')
+    dic['a'].should be 2
+    dic['t'].should be 1
+    dic['d'].should be 1
+    dic['o'].should be 1
+    dic.size.should be 4
+  end
   
 end
