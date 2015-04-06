@@ -1,10 +1,8 @@
 class CharCounter
-  def initialize
-    @ocurrences = Hash.new()
+
+  def self.count(letter)
+    ocurrences = Hash.new()
+    ocurrences[letter] = 1
   end
 
-  def count(letter)
-    ocurrences[letter] = 1
-    @ocurrences
-  end
 end
