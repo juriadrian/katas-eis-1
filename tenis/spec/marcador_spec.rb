@@ -59,4 +59,17 @@ describe 'Marcador' do
     @marcador.punto_para_jugador2
     @jugador1.has_adv.should be false
   end
+
+  it 'Cuando un jugador gana un set, los games vuelven a 0-0 y lo mismo ocurre con los puntos' do
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+
+    expect(@marcador.sets).to eq ('1 - 0')
+    expect(@marcador.games).to eq ('0 - 0')
+    expect(@marcador.puntos).to eq('0 - 0')
+  end
 end

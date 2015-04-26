@@ -34,8 +34,19 @@ class Jugador
   end
 
   def sumar_game(otro_jugador)
+    case @games
+      when 0..4
+        @games += 1
+      when 5
+        self.sumar_set
+        @games = 0
+        otro_jugador.games = 0
+    end
     @puntos = 0
     otro_jugador.puntos = 0
-    @games += 1
+  end
+
+  def sumar_set
+    @sets += 1
   end
 end
