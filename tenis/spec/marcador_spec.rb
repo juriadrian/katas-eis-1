@@ -72,7 +72,7 @@ describe 'Marcador' do
     expect(@marcador.puntos).to eq('0 - 0')
   end
 
-  it 'Cuando un jugador gana un set, los games vuelven a 0-0 y lo mismo ocurre con los puntos' do
+  it 'Cuando un jugador alcance los 6 games gana el set' do
     @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
     @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
     @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
