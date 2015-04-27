@@ -100,4 +100,22 @@ describe 'Marcador' do
     expect(@marcador.sets).to eq ('2 - 0')
     expect(@partido.estado_partido.kind_of? PartidoTerminado).to eq true
   end
+
+  it 'Si el partido terminó, no permite hacer más puntos' do
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+    @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1; @marcador.punto_para_jugador1
+
+    expect{@marcador.punto_para_jugador1}.to raise_exception
+  end
 end
