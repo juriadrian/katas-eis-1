@@ -32,7 +32,7 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
 
   require 'cucumber/rake/task'
   Cucumber::Rake::Task.new(:cucumber) do |task|
-    task.cucumber_opts = ["features"]
+    task.cucumber_opts = ["features", "--tags ~@wip"]
   end
 
   Cucumber::Rake::Task.new(:cucumber_report) do |task|
