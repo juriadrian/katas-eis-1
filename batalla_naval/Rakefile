@@ -7,7 +7,7 @@ PADRINO_ENV  = ENV['PADRINO_ENV'] ||= ENV['RACK_ENV'] ||= 'test'  unless defined
 
 
 task :version do
-  require './lib/version.rb'
+  require_relative '/lib/version.rb'
   puts Version.current
   exit 0
 end
