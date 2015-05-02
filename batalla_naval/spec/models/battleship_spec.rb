@@ -7,6 +7,7 @@ describe 'Battleship' do
   before (:each) do
     @board = Board.new 5,5
     @board.put_small_ship_at 1,1
+    @board.put_large_ship_at 2,2
   end
 
   it 'create a Board' do
@@ -39,6 +40,11 @@ describe 'Battleship' do
 
   it 'when shooting at 1:4, should hit water' do
     expect(@board.shoot_at 1, 4).to eq 'Water'
+  end
+
+  it 'when shooting at 2:2 and 2:3, should sink a large ship' do
+    expect(@board.shoot_at 2, 2).to eq 'Hit'
+    expect(@board.shoot_at 2, 3).to eq 'Sink'
   end
 
 end

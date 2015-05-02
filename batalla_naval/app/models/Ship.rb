@@ -15,8 +15,15 @@ end
 
 class LargeShip < Ship
 
+  @got_hit = false
+
   def get_shot
-    'Hit'
+    if(@got_hit)
+      'Sink'
+    else
+      @got_hit = true
+      'Hit'
+    end
   end
 
 end

@@ -29,3 +29,8 @@ Then(/^I get water$/) do
   @result.should eq 'Water'
 end
 
+Then(/^I get sink$/) do
+  @result.should eq 'Sink'
+end
+
+
