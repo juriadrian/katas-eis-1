@@ -23,4 +23,8 @@ end
 
 class NoShip < Ship
 
+  def get_shot
+    'Water'
+  end
+
 end

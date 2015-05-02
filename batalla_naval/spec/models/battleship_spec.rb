@@ -37,4 +37,8 @@ describe 'Battleship' do
     expect(@board.shoot_at 1, 1).to eq 'Hit'
   end
 
+  it 'when shooting at 1:4, should hit water' do
+    expect(@board.shoot_at 1, 4).to eq 'Water'
+  end
+
 end

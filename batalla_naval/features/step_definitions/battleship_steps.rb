@@ -24,3 +24,8 @@ end
 Then(/^I get hit$/) do
   @result.should eq 'Hit'
 end
+
+Then(/^I get water$/) do
+  @result.should eq 'Water'
+end
+
