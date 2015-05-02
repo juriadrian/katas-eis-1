@@ -9,7 +9,7 @@ Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |x, y|
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |x, y|
-  pending # express the regexp above with the code you wish you had
+  @board.put_large_ship_at x.to_i, y.to_i
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |x, y|

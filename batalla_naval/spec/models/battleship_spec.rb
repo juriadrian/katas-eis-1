@@ -26,4 +26,9 @@ describe 'Battleship' do
     expect(@board.is_empty? 3,3).to eq false
   end
 
+  it 'when creating a large ship in position 3:3, it should occupy and 3:4 as well' do
+    @board.put_large_ship_at 3,3
+    expect(@board.is_empty? 3,4).to eq false
+  end
+
 end
