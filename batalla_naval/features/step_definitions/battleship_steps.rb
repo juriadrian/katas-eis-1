@@ -1,3 +1,5 @@
+require_relative '../../app/models/Board.rb'
+
 Given(/^a board with dimensions "(.*?)" x "(.*?)"$/) do |arg1, arg2|
   @board = Board.new arg1, arg2
 end
