@@ -18,7 +18,12 @@ describe 'Battleship' do
 
   it 'should create a small ship in position 3:3' do
     @board.put_small_ship_at 3,3
-    expect(@board.is_empty 3,3).to eq false
+    expect(@board.is_empty? 3,3).to eq false
+  end
+
+  it 'should create a large ship in position 3:3' do
+    @board.put_large_ship_at 3,3
+    expect(@board.is_empty? 3,3).to eq false
   end
 
 end

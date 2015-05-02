@@ -7,10 +7,15 @@ class Board
   end
 
   def put_small_ship_at(x,y)
-    @grid[x][y] = 'smallBoat'
+    @grid[x][y] = 'smallShip'
   end
 
-  def is_empty(x,y)
+  def put_large_ship_at(x,y)
+    @grid[x][y] = 'largeShip'
+    @grid[x][y+1] = 'largeShip'
+  end
+
+  def is_empty?(x,y)
     @grid[x][y].nil?
   end
 
