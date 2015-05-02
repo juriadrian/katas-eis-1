@@ -1,10 +1,12 @@
 require_relative '../../app/models/Board.rb'
+require_relative '../../app/models/Ship.rb'
 require_relative '../spec_helper.rb'
 
 describe 'Battleship' do
 
   before (:each) do
     @board = Board.new 5,5
+    @board.put_small_ship_at 1,1
   end
 
   it 'create a Board' do
@@ -29,6 +31,10 @@ describe 'Battleship' do
   it 'when creating a large ship in position 3:3, it should occupy and 3:4 as well' do
     @board.put_large_ship_at 3,3
     expect(@board.is_empty? 3,4).to eq false
+  end
+
+  it 'when shooting at 1:1, should hit a small boat' do
+    expect(@board.shoot_at 1, 1).to eq 'Hit'
   end
 
 end
