@@ -33,14 +33,3 @@ Bundler.require(:default, PADRINO_ENV)
 ##
 # Add your before (RE)load hooks here
 #
-Padrino.before_load do
-end
-
-##
-# Add your after (RE)load hooks here
-#
-Padrino.after_load do
-  DataMapper.finalize
-end
-
-Padrino.load!
